@@ -1,12 +1,10 @@
 @import "constants/_colors.scss";
 @import "constants/_dimensions.scss";
 
-.slick-slide {
-  margin: 0 10px;
-}
-
-.slick-list {
-  margin: 0 -10px;
+.slick-track {
+  width: max-content !important;
+  display: flex;
+  gap: 10px;
 }
 
 .restaurants-slider-title {
@@ -110,7 +108,8 @@
   letter-spacing: 2px;
   line-height: 35px;
   @include mobile {
-    left: 0;
+    bottom: -50px;
+    left: 10px;
   }
 }
 

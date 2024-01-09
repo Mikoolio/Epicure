@@ -9,9 +9,11 @@ import Hero from "components/Hero";
 import data from "assets/restaurants.json";
 import CardDishSlider from "components/CardDishSlider";
 import Meaning from "components/Meaning";
-import RestaurantList from "components/RestaurantList";
 import ChefSection from "components/ChefSection";
 import CardRestSlider from "components/CardRestSlider";
+import AboutUs from "components/AboutUs";
+import MediaQuery from "react-responsive";
+import Footer from "components/Footer";
 
 function App() {
   return (
@@ -28,7 +30,13 @@ function App() {
         <CardRestSlider cards={data} />
         <Meaning />
         <ChefSection chefName="Yossi Shitrit" restaurants={data} />
-        <FooterDesktop />
+        <AboutUs />
+        <MediaQuery minWidth={780}>
+          <FooterDesktop />
+        </MediaQuery>
+        <MediaQuery maxWidth={780}>
+          <Footer />
+        </MediaQuery>
       </BrowserRouter>
     </div>
   );
